@@ -90,10 +90,6 @@ public class test_smote_per{
         double meanNoiseRatio_CCONC150=0.0;
         double meanNoiseRatio_CCONC200=0.0;
 
-        double mean_runTime_CCONC=0;
-        double mean_runTime_CCONC100=0;
-        double mean_runTime_CCONC150=0;
-        double mean_runTime_CCONC200=0;
 
         try {
 
@@ -116,10 +112,6 @@ public class test_smote_per{
                 double noiseRatio_CCONC200=0.0;
 
 
-                double runTime_CCONC=0;
-                double runTime_CCONC100=0;
-                double runTime_CCONC150=0;
-                double runTime_CCONC200=0;
 
 
                 //模拟
@@ -128,10 +120,10 @@ public class test_smote_per{
 
                 for(int t=0;t<t_num;t++) {
 
-                    //experiment.simulate(dataset, 7, 0.55,0.75);
 
-                    double startTime=0;
-                    double endTime=0;
+
+//                    double startTime=0;
+//                    double endTime=0;
 
 
                     //MV
@@ -140,39 +132,39 @@ public class test_smote_per{
                     System.out.println("time "+(t+1)+"\t 开始");
 
                     //mynew
-                    startTime=System.currentTimeMillis();
+//                    startTime=System.currentTimeMillis();
                     CCONC mynew=new CCONC();
                     Dataset dataset_corrected_mynew = mynew.cconc(dataset);
-                    endTime=System.currentTimeMillis();
+//                    endTime=System.currentTimeMillis();
                     noiseRatio_CCONC += experiment.getNoiseRatio(dataset_corrected_mynew);
-                    runTime_CCONC+=(endTime-startTime)/1000.0;
+//                    runTime_CCONC+=(endTime-startTime)/1000.0;
                     System.out.println("CCONC Completed");
 
                     //100
-                    startTime=System.currentTimeMillis();
+//                    startTime=System.currentTimeMillis();
                     CCONC100 cconc100=new CCONC100();
                     Dataset dataset_corrected_cconc100 = cconc100.cconc100(dataset);
-                    endTime=System.currentTimeMillis();
+//                    endTime=System.currentTimeMillis();
                     noiseRatio_CCONC100 += experiment.getNoiseRatio(dataset_corrected_cconc100);
-                    runTime_CCONC100+=(endTime-startTime)/1000.0;
+//                    runTime_CCONC100+=(endTime-startTime)/1000.0;
                     System.out.println("CCONC100 Completed");
 
                     //150
-                    startTime=System.currentTimeMillis();
+//                    startTime=System.currentTimeMillis();
                     CCONC150 cconc150=new CCONC150();
                     Dataset dataset_corrected_cconc150 = cconc150.cconc150(dataset);
-                    endTime=System.currentTimeMillis();
+//                    endTime=System.currentTimeMillis();
                     noiseRatio_CCONC150 += experiment.getNoiseRatio(dataset_corrected_cconc150);
-                    runTime_CCONC150+=(endTime-startTime)/1000.0;
+//                    runTime_CCONC150+=(endTime-startTime)/1000.0;
                     System.out.println("CCONC150 Completed");
 
                     //200
-                    startTime=System.currentTimeMillis();
+//                    startTime=System.currentTimeMillis();
                     CCONC200 cconc200=new CCONC200();
                     Dataset dataset_corrected_cconc200 = cconc200.cconc200(dataset);
-                    endTime=System.currentTimeMillis();
+//                    endTime=System.currentTimeMillis();
                     noiseRatio_CCONC200 += experiment.getNoiseRatio(dataset_corrected_cconc200);
-                    runTime_CCONC200+=(endTime-startTime)/1000.0;
+//                    runTime_CCONC200+=(endTime-startTime)/1000.0;
                     System.out.println("CCONC200 Completed");
 
                     System.out.println("time "+(t+1)+"\t Completed!");
@@ -190,20 +182,8 @@ public class test_smote_per{
 
 
 
-                runTime_CCONC/=t_num;
-                runTime_CCONC100/=t_num;
-                runTime_CCONC150/=t_num;
-                runTime_CCONC200/=t_num;
-
-                mean_runTime_CCONC+=runTime_CCONC;
-                mean_runTime_CCONC100+=runTime_CCONC100;
-                mean_runTime_CCONC150+=runTime_CCONC150;
-                mean_runTime_CCONC200+=runTime_CCONC200;
-
                 result.format("%-20s %-10.2f %-10.2f %-10.2f %-10.2f", names[i],noiseRatio_CCONC,noiseRatio_CCONC100,noiseRatio_CCONC150,noiseRatio_CCONC200);
                 result.println();
-                result_t.format("%-20s %-10.5f %-10.5f %-10.5f %-10.5f", names[i],runTime_CCONC,runTime_CCONC100,runTime_CCONC150,runTime_CCONC200);
-                result_t.println();
 
 
                 System.out.println(names[i]+" complete!");
@@ -218,14 +198,6 @@ public class test_smote_per{
             result.format("%-20s %-10.2f %-10.2f %-10.2f %-10.2f", "Mean",meanNoiseRatio_CCONC,meanNoiseRatio_CCONC100,meanNoiseRatio_CCONC150,meanNoiseRatio_CCONC200);
             result.println();
             result.close();
-
-            mean_runTime_CCONC/=names.length;
-            mean_runTime_CCONC100/=names.length;
-            mean_runTime_CCONC150/=names.length;
-            mean_runTime_CCONC200/=names.length;
-            result_t.format("%-20s %-10.5f %-10.5f %-10.5f %-10.5f", "Mean",mean_runTime_CCONC,mean_runTime_CCONC100,mean_runTime_CCONC150,mean_runTime_CCONC200);
-            result_t.println();
-            result_t.close();
 
 
             System.out.println("Complete!!!");
