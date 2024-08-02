@@ -17,7 +17,7 @@ public class test_smote_per{
     private static int t_num=10;
 
     //真实世界数据集
-    private static String[] names = {"leaves6","income","labelme"};
+    private static String[] names = {"leaves6","income94L10","labelme"};
 
     public Dataset readRealDataset(int m_choose) throws Exception{
         String dataDir = "E:\\data\\real-world\\CCONC\\";
@@ -103,12 +103,6 @@ public class test_smote_per{
             PrintStream result=new PrintStream(f);
             result.format("%-20s %-10s %-10s %-10s %-10s", "Dataset","CCONC","CCONC100","CCONC150","CCONC200");
             result.println();
-            //时间
-            String resultPath_t="E:\\data\\result\\CCONC_result_smote_t_real.txt";
-            FileOutputStream f_t=new FileOutputStream(new File(resultPath_t));
-            PrintStream result_t=new PrintStream(f_t);
-            result_t.format("%-20s %-10s %-10s %-10s %-10s", "Dataset","CCONC","CCONC100","CCONC150","CCONC200");
-            result_t.println();
 
 
 
