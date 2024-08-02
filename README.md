@@ -28,9 +28,9 @@ Modify the following path to store the experimental results.
 ### Conduct the parameter analysis experiments on real-world datasets.
 Modify the path where the real_world datasets are stored.  
 ![image](https://github.com/user-attachments/assets/0dfa9b67-1948-4921-a341-ef6995ee8c9f)  
-Modify the following path to store the experimental results.
+Modify the following path to store the experimental results.  
 ![image](https://github.com/user-attachments/assets/d1edac00-8465-43e5-9762-2f814b0d39cf)  
-Set the percentage to 50% in CCONC.java.
+Set the percentage to 50% in CCONC.java.  
 ![image](https://github.com/user-attachments/assets/5f912844-0634-49d4-bfd9-c4e6e8ea730b)
 
  
