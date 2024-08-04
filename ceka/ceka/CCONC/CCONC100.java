@@ -152,7 +152,7 @@ public class CCONC100 {
         //smote Oversampling
         SMOTE smote=new SMOTE();
         smote.setInputFormat(cleanSet);
-        smote.setPercentage(100.0); // 过采样50%
+        smote.setPercentage(100.0); // 过采样100%
         smote.setNearestNeighbors(5); // 5个最近邻
         Instances smoteData= Filter.useFilter(cleanSet,smote);
 //        System.out.println(smoteData.numInstances());
