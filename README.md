@@ -31,8 +31,8 @@ Modify the path where the real_world datasets are stored.
 Modify the following path to store the experimental results.  
 ![image](https://github.com/user-attachments/assets/d1edac00-8465-43e5-9762-2f814b0d39cf)  
 Set the percentage to 50% in CCONC.java.  
-![image](https://github.com/user-attachments/assets/5f912844-0634-49d4-bfd9-c4e6e8ea730b)
-Set the threshold from 0.05 to 0.2 in CCONC.java, CCONC100.java, CCONC150.java and CCONC200.java, respectively. 
+![image](https://github.com/user-attachments/assets/5f912844-0634-49d4-bfd9-c4e6e8ea730b)  
+Set the threshold from 0.05 to 0.2 in CCONC.java, CCONC100.java, CCONC150.java and CCONC200.java, respectively.  
 ![image](https://github.com/user-attachments/assets/cb6686d4-726b-4e9e-a455-face02d71db9)
 
 
